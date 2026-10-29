@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Studi Sistem Informasi</title>
+    
+    <!-- 1. Memanggil Bootstrap 5 CSS dari CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 2. Memanggil Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarUtama" data-bs-offset="70">
+
+    <!-- BAGIAN NAVIGASI (Bilah Atas) -->
+    <!-- fixed-top: menahan navigasi selalu di atas saat digulir -->
+    <nav id="navbarUtama" class="navbar navbar-expand-lg navbar-dark fixed-top transparan-awal">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">PRODI SISFO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto"> <!-- ms-auto: mendorong menu ke kanan -->
+                    <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#layanan">Keunggulan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portofolio">Karya Mahasiswa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- BAGIAN BERANDA (Hero Section) -->
+    <section id="beranda" class="hero d-flex align-items-center">
+        <div class="container text-center text-white">
+            <h1 class="display-3 fw-bold mb-4">Mencetak Profesional Sistem Informasi Masa Depan</h1>
+            <p class="lead mb-4">Program Studi Sistem Informasi membekali mahasiswa dengan keahlian teknologi, analisis bisnis, dan pengelolaan data untuk menjawab tantangan transformasi digital.</p>
+            <a href="#layanan" class="btn btn-primary btn-lg rounded-pill px-4">Jelajahi Keunggulan</a>
+        </div>
+    </section>
+
+    <!-- BAGIAN KEUNGGULAN PRODI (Grid System Bootstrap) -->
+    <section id="layanan" class="py-5 bg-light">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Keunggulan Program Studi</h2>
+                <div class="garis-bawah mx-auto"></div>
+            </div>
+            
+            <div class="row g-4"> <!-- row: Baris, g-4: Jarak antar kolom (gap) -->
+                <!-- col-md-4: Memakan 4 dari 12 grid (sehingga 1 baris isi 3 kartu pada layar medium ke atas) -->
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-3 shadow-sm efek-hover">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Pengembangan Sistem</h5>
+                            <p class="card-text">Mempelajari analisis, perancangan, hingga implementasi sistem informasi berbasis web dan mobile untuk kebutuhan organisasi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-3 shadow-sm efek-hover">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Data &amp; Business Intelligence</h5>
+                            <p class="card-text">Mengolah basis data dan data analitik untuk menghasilkan informasi yang mendukung pengambilan keputusan bisnis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 text-center p-3 shadow-sm efek-hover">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Infrastruktur &amp; Keamanan TI</h5>
+                            <p class="card-text">Merancang jaringan, tata kelola, dan keamanan teknologi informasi agar layanan digital berjalan andal dan aman.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGIAN KARYA MAHASISWA (Interaktif dengan jQuery Filter) -->
+    <section id="portofolio" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Karya Mahasiswa</h2>
+                <div class="garis-bawah mx-auto mb-4"></div>
+                
+                <!-- Tombol Filter jQuery -->
+                <div class="grup-filter mb-4">
+                    <button class="btn btn-outline-primary btn-filter aktif" data-filter="semua">Semua</button>
+                    <button class="btn btn-outline-primary btn-filter" data-filter="web">Web App</button>
+                    <button class="btn btn-outline-primary btn-filter" data-filter="mobile">Mobile App</button>
+                </div>
+            </div>
+
+            <div class="row g-4" id="galeri-portofolio">
+                <!-- Atribut kustom data-kategori akan dibaca oleh jQuery -->
+                <div class="col-md-4 item-portofolio" data-kategori="web">
+                    <img src="https://picsum.photos/id/20/400/300" class="img-fluid rounded shadow-sm" alt="Karya Web 1">
+                    <h5 class="mt-2 text-center">Sistem Informasi Akademik</h5>
+                </div>
+                <div class="col-md-4 item-portofolio" data-kategori="mobile">
+                    <img src="https://picsum.photos/id/60/400/300" class="img-fluid rounded shadow-sm" alt="Karya Mobile 1">
+                    <h5 class="mt-2 text-center">Aplikasi Presensi Mahasiswa</h5>
+                </div>
+                <div class="col-md-4 item-portofolio" data-kategori="web">
+                    <img src="https://picsum.photos/id/180/400/300" class="img-fluid rounded shadow-sm" alt="Karya Web 2">
+                    <h5 class="mt-2 text-center">Portal E-Learning Prodi</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAGIAN KONTAK (Formulir dengan Validasi jQuery) -->
+    <section id="kontak" class="py-5 bg-dark text-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <h2 class="fw-bold">Hubungi Prodi Kami</h2>
+                    <p>Punya pertanyaan seputar kurikulum, pendaftaran, atau kerja sama? Sampaikan melalui formulir berikut dan tim Prodi Sistem Informasi akan menghubungi Anda.</p>
+                </div>
+                <div class="col-md-6">
+                    <form id="form-kontak" class="bg-white p-4 rounded text-dark shadow">
+                        <div class="mb-3">
+                            <label class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-control" id="input-nama" placeholder="Masukkan nama Anda">
+                            <div class="invalid-feedback">Nama tidak boleh kosong!</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Alamat Surel (Email)</label>
+                            <input type="email" class="form-control" id="input-email" placeholder="contoh@domain.com">
+                            <div class="invalid-feedback">Format email tidak valid!</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Kirim Pesan</button>
+                        
+                        <!-- Pesan Sukses (Disembunyikan via CSS) -->
+                        <div id="pesan-sukses" class="alert alert-success mt-3" style="display:none;">
+                            Pesan Anda berhasil terkirim. Tim Prodi akan segera merespons!
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-3 bg-black text-secondary">
+        <small>&copy; 2026 Program Studi Sistem Informasi. Dibuat untuk Keperluan Praktikum Akademik.</small>
+    </footer>
+
+    <!-- 3. Memanggil Pustaka jQuery dari CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- 4. Memanggil Bootstrap Bundle JS (untuk animasi navbar & komponen interaktif) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 5. Memanggil Skrip Logika Kita -->
+    <script src="script.js"></script>
+</body>
+</html>

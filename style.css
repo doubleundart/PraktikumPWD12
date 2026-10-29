@@ -1,0 +1,93 @@
+/* Mengatur font agar lebih bersih */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth; /* Membuat efek gulir antar bagian menjadi mulus */
+}
+
+/* --- Desain Bilah Navigasi --- */
+/* Kondisi saat berada di puncak halaman (transparan) */
+.transparan-awal {
+    background-color: transparent !important;
+    transition: background-color 0.4s ease, padding 0.4s ease;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Kondisi saat halaman digulir (kelas ini akan ditambahkan oleh jQuery) */
+.navbar-scrolled {
+    background-color: #9d174d !important; /* Warna pink tua (berry) */
+    padding-top: 10px;
+    padding-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Desain Beranda (Hero Section) --- */
+.hero {
+    /* Gunakan warna gradien linear digabung dengan gambar (jika ada) */
+    background: linear-gradient(rgba(157, 23, 77, 0.75), rgba(244, 114, 182, 0.65)), url('https://picsum.photos/id/0/1920/1080') center/cover;
+    height: 100vh; /* Memakan 100% tinggi layar penampil */
+    min-height: 500px;
+}
+
+/* --- Dekorasi Estetika --- */
+.garis-bawah {
+    width: 60px;
+    height: 4px;
+    background-color: #f472b6; /* Warna pink muda */
+    border-radius: 2px;
+}
+
+/* --- Efek Interaktif (Hover) --- */
+.efek-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.efek-hover:hover {
+    transform: translateY(-10px); /* Mengangkat kartu 10px ke atas */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Animasi gambar portofolio */
+.item-portofolio img {
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.item-portofolio img:hover {
+    transform: scale(1.05); /* Memperbesar gambar 5% */
+}
+
+/* --- Penggantian Skema Warna (biru Bootstrap -> pink) --- */
+.text-primary {
+    color: #db2777 !important;
+}
+
+.btn-primary {
+    --bs-btn-bg: #db2777;
+    --bs-btn-border-color: #db2777;
+    --bs-btn-hover-bg: #be185d;
+    --bs-btn-hover-border-color: #be185d;
+    --bs-btn-active-bg: #be185d;
+    --bs-btn-active-border-color: #be185d;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #db2777;
+    --bs-btn-border-color: #db2777;
+    --bs-btn-hover-bg: #db2777;
+    --bs-btn-hover-border-color: #db2777;
+    --bs-btn-active-bg: #db2777;
+    --bs-btn-active-border-color: #db2777;
+}
+
+#layanan.bg-light {
+    background-color: #fff0f6 !important; /* Latar section keunggulan */
+}
+
+#kontak.bg-dark {
+    background-color: #9d174d !important; /* Latar section kontak */
+}
+
+footer.bg-black {
+    background-color: #500724 !important; /* Latar footer */
+}
